@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 var port = 8000;
 
-app.listen(port);
-
-console.log('Server Started')
+app.listen(port, (err,req)=>{
+    if(err){
+        console.log('server error')
+    } else{
+        console.log('Server Started')
+    }
+});
